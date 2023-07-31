@@ -1,8 +1,8 @@
 import Image from "next/image";
 import { BiSolidHome } from "react-icons/bi";
-import { RiMoneyDollarBoxFill } from "react-icons/Ri";
-import { CgProfile } from "react-icons/Cg";
-import { FiLogOut } from "react-icons/Fi";
+import { RiMoneyDollarBoxFill } from "react-icons/ri";
+import { CgProfile } from "react-icons/cg";
+import { FiLogOut } from "react-icons/fi";
 import { useDispatch, useSelector } from "react-redux/es/exports";
 
 import { sideTabs, updateTab } from "../../../store/sidebarSlice";
