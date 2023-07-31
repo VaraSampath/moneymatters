@@ -1,12 +1,11 @@
 import Header from "../Header";
-import { useEffect, useState } from "react";
+import { useEffect } from "react";
 
 import { fetchAdminTotalTransactionData } from "../../../store/adminTotalDebitCreditSlice";
 import { useDispatch, useSelector } from "react-redux";
-import LastTransactions from "../lastTransactions";
+
 import Example from "../customChart";
-import { useRouter } from "next/navigation";
-import AdminCustomTable from "../adminCustomTable";
+
 import AdminLastTransactions from "../adminLastTransactions/AdminLastTrasactions";
 
 const AdminDashboard = () => {

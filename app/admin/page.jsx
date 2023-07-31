@@ -1,3 +1,4 @@
+"use client";
 import AdminSidebar from "../components/adminSidebar";
 
 import React from "react";

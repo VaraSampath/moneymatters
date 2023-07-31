@@ -1,8 +1,6 @@
 "use client";
 import { FiArrowDownCircle, FiArrowUpCircle } from "react-icons/Fi";
-import { AiOutlineCloseCircle } from "react-icons/ai";
-import { LuEdit2 } from "react-icons/lu";
-import { RiDeleteBin5Line } from "react-icons/Ri";
+
 import {
   Table,
   TableBody,
