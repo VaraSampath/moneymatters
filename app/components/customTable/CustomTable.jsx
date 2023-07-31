@@ -71,7 +71,7 @@ const CustomTable = ({ data, isHeader, category, setTableData }) => {
         "x-hasura-admin-secret":
           "g08A3qQy00y8yFDq3y6N1ZQnhOPOa4msdie5EtKS1hFStar01JzPKrtKEzYY2BtF",
         "x-hasura-role": "user",
-        "x-hasura-user-id": "1",
+        "x-hasura-user-id": `${localStorage.getItem("userID")}`,
       },
       params: {
         id: id,
@@ -92,7 +92,7 @@ const CustomTable = ({ data, isHeader, category, setTableData }) => {
         "x-hasura-admin-secret":
           "g08A3qQy00y8yFDq3y6N1ZQnhOPOa4msdie5EtKS1hFStar01JzPKrtKEzYY2BtF",
         "x-hasura-role": "user",
-        "x-hasura-user-id": "1",
+        "x-hasura-user-id": `${localStorage.getItem("userID")}`,
       },
       params: {
         id: bodyData.id,
@@ -136,7 +136,7 @@ const CustomTable = ({ data, isHeader, category, setTableData }) => {
   }
 
   if (newData.length === 0) {
-    return <div>Loading</div>;
+    return <div>No Data Found</div>;
   }
 
   return (

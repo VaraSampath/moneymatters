@@ -1,5 +1,6 @@
 import { createSlice, createAsyncThunk } from "@reduxjs/toolkit";
 import axios from "axios";
+const userId = localStorage.getItem("userID");
 const url =
   "https://bursting-gelding-24.hasura.app/api/rest/credit-debit-totals";
 const options = {
@@ -8,7 +9,7 @@ const options = {
     "x-hasura-admin-secret":
       "g08A3qQy00y8yFDq3y6N1ZQnhOPOa4msdie5EtKS1hFStar01JzPKrtKEzYY2BtF",
     "x-hasura-role": "user",
-    "x-hasura-user-id": "1",
+    "x-hasura-user-id": `${Number(userId) || 1}`,
   },
 };
 export const fetchTotalTransactionData = createAsyncThunk(

@@ -16,7 +16,7 @@ const page = () => {
       "x-hasura-admin-secret":
         "g08A3qQy00y8yFDq3y6N1ZQnhOPOa4msdie5EtKS1hFStar01JzPKrtKEzYY2BtF",
       "x-hasura-role": "user",
-      "x-hasura-user-id": "1",
+      "x-hasura-user-id": localStorage.getItem("userID"),
     },
   };
 
@@ -33,6 +33,7 @@ const page = () => {
   }, []);
 
   const user = userDetails[0];
+  console.log(user);
   return (
     <div className=" flex  h-screen">
       <div className=" w-max">

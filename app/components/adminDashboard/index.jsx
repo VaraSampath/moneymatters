@@ -1,21 +1,23 @@
 import Header from "../Header";
 import { useEffect, useState } from "react";
 
-import { fetchTotalTransactionData } from "../../../store/totalDebitAndCreditSlice";
+import { fetchAdminTotalTransactionData } from "../../../store/adminTotalDebitCreditSlice";
 import { useDispatch, useSelector } from "react-redux";
 import LastTransactions from "../lastTransactions";
 import Example from "../customChart";
 import { useRouter } from "next/navigation";
+import AdminCustomTable from "../adminCustomTable";
+import AdminLastTransactions from "../adminLastTransactions/AdminLastTrasactions";
 
-const Dashboard = () => {
+const AdminDashboard = () => {
   const dispatch = useDispatch();
   const { data, loading, error } = useSelector(
-    (state) => state.totalDebitCredit
+    (state) => state.adminTotalDebitCredit
   );
 
   useEffect(() => {
     if (loading == "idle") {
-      dispatch(fetchTotalTransactionData());
+      dispatch(fetchAdminTotalTransactionData());
     }
   }, []);
   const formatter = Intl.NumberFormat("en-US", {
@@ -96,11 +98,11 @@ const Dashboard = () => {
       <Header />
       <div className="h-full bg-gray-100 py-8 px-10 overflow-y-auto">
         <div>{content}</div>
-        <LastTransactions />
+        <AdminLastTransactions />
         <Example />
       </div>
     </>
   );
 };
 
-export default Dashboard;
+export default AdminDashboard;

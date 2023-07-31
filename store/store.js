@@ -5,6 +5,9 @@ import { allTransactionsReducer } from "./allTransactionsSlice";
 import { weekTransaction } from "./weekTransactionSlice";
 import tableDataSlice from "./tableDataSlice";
 import loginSlice from "./loginSlice";
+import { adminTransactionsReducer } from "./adminTransactions";
+import { AdminSidebar } from "./adminSidebarSlice";
+import { adminTotalDebitCredit } from "./adminTotalDebitCreditSlice";
 
 const store = configureStore({
   reducer: {
@@ -14,6 +17,9 @@ const store = configureStore({
     weekTransaction,
     tableDataSlice,
     loginSlice,
+    adminTransactions: adminTransactionsReducer,
+    adminSidebar: AdminSidebar,
+    adminTotalDebitCredit,
   },
 });
 
